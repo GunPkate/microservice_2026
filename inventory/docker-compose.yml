@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:17.9
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: inventory
+      POSTGRES_DB: inventory_service
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/var/lib/postgres
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

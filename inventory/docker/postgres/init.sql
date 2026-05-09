@@ -1,0 +1,1 @@
+CREATE Database IF NOT EXISTS inventory_service
