@@ -19,7 +19,9 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "order_number")
     private String orderNumber;
+    @Column(name = "sku_code")
     private String skuCode;
     private BigDecimal price;
     private Integer quantity;

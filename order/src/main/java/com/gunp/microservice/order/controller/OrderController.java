@@ -3,10 +3,7 @@ package com.gunp.microservice.order.controller;
 import com.gunp.microservice.order.model.OrderRequest;
 import com.gunp.microservice.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/order")
@@ -16,7 +13,7 @@ public class OrderController {
     private final OrderService orderService;
     @PostMapping
     @ResponseStatus
-    public String placeOrder(OrderRequest orderRequest){
+    public String placeOrder(@RequestBody OrderRequest orderRequest){
         orderService.placeOrder(orderRequest);
         return "Order placed successfully";
     }
