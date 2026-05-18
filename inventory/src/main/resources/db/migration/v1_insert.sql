@@ -1,0 +1,1 @@
+Insert Into t_inventory values()
