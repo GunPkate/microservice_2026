@@ -17,7 +17,7 @@ public class InventoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String quantity;
     @Name("sku_code")
-    private Integer skuCode;
+    private String skuCode;
+    private Integer quantity;
 }
